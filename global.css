@@ -1,0 +1,110 @@
+:root {
+    --content-width: 50em;
+    --beige: #D1BC8A;
+}
+
+.navbar {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    padding: 1em;
+}
+
+.navlinks {
+    display: none;
+}
+
+.navlogo {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    color: black;
+}
+
+.navitem {
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin-top: .3em;
+}
+
+.hamburger {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    font-size: 1.5em;
+}
+
+.main {
+    max-width: var(--content-width);
+    min-height: 80vh;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-content {
+    text-align: left;
+}
+
+.comment-author {
+    color: gray;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: .75em;
+}
+
+.comment-author-pic {
+    width: 2em;
+    height: 2em;
+    margin-left: 1em;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+blockquote {
+    font-style: italic;
+    background-color: #e8e6e3;
+    padding: 1em;
+    border-radius: .75em;
+}
+
+.member img {
+    display: block;
+    top: 0;
+    right: 0;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.member h2 {
+    margin-bottom: 0em;
+}
+
+.member-short-info {
+    color: gray;
+    font-variant: small-caps;
+    font-style: italic;
+}
+
+.member-long-info {
+    text-align: left;
+}
+
+#statute {
+    text-align: left;
+}
+
+.footer {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    text-align: center;
+}
+

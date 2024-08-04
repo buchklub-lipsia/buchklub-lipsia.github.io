@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Buchklub Lipsius</title>
+        <link rel="stylesheet" href="global.css">
+    </head>
+
+    <body>
+                <div class="non-footer">
+            <div class="navbar">
+                <a href="index.html" class="navlogo">Buchklub Lipsius</a>
+                <div class="navlinks" id="navlinks">
+                    <a href="books.html" class="navitem">Bücher</a>
+                    <a href="members.html" class="navitem">Mitglieder</a>
+                    <a href="statute.html" class="navitem">Satzung</a>
+                    <a href="contact.html" class="navitem">Kontakt</a>
+                    <a href="misc.html" class="navitem">Veschiedenes</a>
+                </div>
+                <a href="javascript:void(0);" class="hamburger" onclick="hamburgerToggle()">&#x2630;</a>
+            </div>
+        </div>
+        <script>
+        function hamburgerToggle() {
+            var nav = document.getElementById("navlinks");
+            if (nav.style.display === "block") {
+                nav.style.display = "none";
+            } else {
+                nav.style.display = "block";
+            }
+        }
+        </script>
+
+
+        <div class="main">
+            <h1>Gelesene Bücher</h1>
+            <div class="main-content">
+                <h2>Irgendne Frau: Quecksilber</h2>
+                <p>Das vorletzte Buch des ersten Orbits war »Quecksilber« von Irgendner Frau. Das erste Mal waren wir uns einigermaßen uneinig.</p>
+                <h3>Meinungen der Mitglieder</h3>
+                <blockquote>Ich fands nicht so nice</blockquote>
+                <p class="comment-author">–Malte <!-- <img src="img/malte.webp" alt="Malte" class="comment-author-pic">--></p>
+                <blockquote>War es eigentlich feministisch?</blockquote>
+                <p class="comment-author">–Jessi <!-- <img src="nope" alt="Jessi" class="comment-author-pic">--></p>
+                <hr>
+                <h2>Japaner: Der Maler der fließenden Welt</h2>
+                <p>Das erste asiatische Buch.</p>
+                <h3>Meinungen der Mitglieder</h3>
+                <blockquote>Oper war nice</blockquote>
+                <p class="comment-author">–Aurel <!-- <img src="" alt="Aurel" class="comment-author-pic">--></p>
+                <blockquote>War okee</blockquote>
+                <p class="comment-author">–Linus <!-- <img src="" alt="Linus" class="comment-author-pic">--></p>
+                <hr>
+            </div>
+        </div>
+                <div class="footer">
+            <p>Website-Bau von: 04.08.2024 19:37</p>
+            <p>&copy;2024 Malte Dostal, technischer Inhalt (im ausdrücklichen Gegensatz zum tatsächlichen Inhalt der Website) nach Belieben, auch ohne Quellennennung, verwendbar.</p>
+            <p>Diese Website wird statisch generiert aus JSON-Dateien von einem kleinen Rust-Programm (<a href="https://www.example.com">https://www.example.com</a>)</p>
+        </div>
+
+    </body>
+</html>
+

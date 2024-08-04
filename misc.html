@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Buchklub Lipsius: Verschiedenes</title>
+        <link rel="stylesheet" href="global.css">
+    </head>
+
+    <body>
+                <div class="non-footer">
+            <div class="navbar">
+                <a href="index.html" class="navlogo">Buchklub Lipsius</a>
+                <div class="navlinks" id="navlinks">
+                    <a href="books.html" class="navitem">Bücher</a>
+                    <a href="members.html" class="navitem">Mitglieder</a>
+                    <a href="statute.html" class="navitem">Satzung</a>
+                    <a href="contact.html" class="navitem">Kontakt</a>
+                    <a href="misc.html" class="navitem">Veschiedenes</a>
+                </div>
+                <a href="javascript:void(0);" class="hamburger" onclick="hamburgerToggle()">&#x2630;</a>
+            </div>
+        </div>
+        <script>
+        function hamburgerToggle() {
+            var nav = document.getElementById("navlinks");
+            if (nav.style.display === "block") {
+                nav.style.display = "none";
+            } else {
+                nav.style.display = "block";
+            }
+        }
+        </script>
+
+
+        <div class="main">
+            <h1>Verschiedenes</h1>
+            <h2>Ein kleines Gedicht aufs Haus</h2>
+            <p>
+            Freiheit ist das höchste Gut,<br>
+            Wonach der Mensch je strebe.<br>
+            Also stets mit tüchtig Mut:<br>
+            Strebe, Gebe, Lebe!
+            </p>
+        </div>
+                <div class="footer">
+            <p>Website-Bau von: 04.08.2024 19:37</p>
+            <p>&copy;2024 Malte Dostal, technischer Inhalt (im ausdrücklichen Gegensatz zum tatsächlichen Inhalt der Website) nach Belieben, auch ohne Quellennennung, verwendbar.</p>
+            <p>Diese Website wird statisch generiert aus JSON-Dateien von einem kleinen Rust-Programm (<a href="https://www.example.com">https://www.example.com</a>)</p>
+        </div>
+
+    </body>
+</html>
+
