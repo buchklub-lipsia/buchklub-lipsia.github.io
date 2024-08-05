@@ -21,6 +21,48 @@
                 <a href="javascript:void(0);" class="hamburger" onclick="hamburgerToggle()">&#x2630;</a>
             </div>
         </div>
+
+
+        <div class="main">
+            <h1>Gelesene Bücher</h1>
+            <h2 class="collapser">Kompakte Liste</h2>
+            <ul class="compact-list">
+                <li>Vladimir Nabokov: Lushins Verteidigung</li>
+                <li>Amélie Nothomb: Quecksilber</li>
+                <li>Kazuo Ishiguro: Der Maler der fließenden Welt</li>
+                <li>Wenedikt Jerofejew: Die Reise nach Petuschki</li>
+                <li>Benjamin Labatut: Das blinde Licht. Irrfahrten der Wissenschaft</li>
+            </ul>
+            <div class="main-content">
+                <h2 >Amélie Nothomb: Quecksilber</h2>
+                <p class="comment-author">Vorgeschlagen von: Linus</p>
+                <p>... bei dem wir uns herrlich uneinig waren.</p>
+                
+                <hr>
+                <h2 id="not-first-book">Kazuo Ishiguro: Der Maler der fließenden Welt</h2>
+                <p class="comment-author">Vorgeschlagen von: Alexander</p>
+                <p>... bei dem sich alles um die Frage drehte, wie weit dem Erzähler zu trauen sei.</p>
+                
+                <hr>
+                <h2 >Wenedikt Jerofejew: Die Reise nach Petuschki</h2>
+                <p class="comment-author">Vorgeschlagen von: ehemaliges Mitglied</p>
+                <p>... wozu wir uns passenderweise in der Vodkaria trafen.</p>
+                
+                <hr>
+                <h2 >Benjamin Labatut: Das blinde Licht. Irrfahrten der Wissenschaft</h2>
+                <p class="comment-author">Vorgeschlagen von: Malte</p>
+                <p>Das erste Buch im Buchklub Lipsius!</p>
+                <h3>Meinungen der Mitglieder</h3>
+                <blockquote>Test ... bieb ... bieb ...</blockquote>
+                <p class="comment-author">–System <!-- <img src="https://picsum.photos/200" alt="System" class="comment-author-pic">--></p>
+                <hr>
+            </div>
+        </div>
+                <div class="footer">
+            <p>Website-Bau vom: 05.08.2024 18:14</p>
+            <p>&copy; technische Umsetzung: 2024 Malte Dostal. Frei und ohne Quellennennung nach Belieben wiederverwertbar.</p>
+            <p>&copy; Inhalt: 2024 die <a href="members.html">Mitglieder</a>.</p>
+        </div>
         <script>
         function hamburgerToggle() {
             var nav = document.getElementById("navlinks");
@@ -30,36 +72,37 @@
                 nav.style.display = "block";
             }
         }
+        var colls = document.getElementsByClassName("collapser");
+        for (var i = 0; i < colls.length; i++) {
+            var coll = colls[i];
+            coll.innerHTML = "&blacktriangleright; " + coll.innerHTML;
+            coll.nextElementSibling.style.display = "none";
+            coll.addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    this.innerHTML = "&blacktriangleright;" + this.innerHTML.substring(1);
+                    content.style.display = "none";
+                } else {
+                    this.innerHTML = "&blacktriangledown;" + this.innerHTML.substring(1);
+                    content.style.display = "block";
+                }
+            });
+        }
         </script>
 
-
-        <div class="main">
-            <h1>Gelesene Bücher</h1>
-            <div class="main-content">
-                <h2>Irgendne Frau: Quecksilber</h2>
-                <p>Das vorletzte Buch des ersten Orbits war »Quecksilber« von Irgendner Frau. Das erste Mal waren wir uns einigermaßen uneinig.</p>
-                <h3>Meinungen der Mitglieder</h3>
-                <blockquote>Ich fands nicht so nice</blockquote>
-                <p class="comment-author">–Malte <!-- <img src="img/malte.webp" alt="Malte" class="comment-author-pic">--></p>
-                <blockquote>War es eigentlich feministisch?</blockquote>
-                <p class="comment-author">–Jessi <!-- <img src="nope" alt="Jessi" class="comment-author-pic">--></p>
-                <hr>
-                <h2>Japaner: Der Maler der fließenden Welt</h2>
-                <p>Das erste asiatische Buch.</p>
-                <h3>Meinungen der Mitglieder</h3>
-                <blockquote>Oper war nice</blockquote>
-                <p class="comment-author">–Aurel <!-- <img src="" alt="Aurel" class="comment-author-pic">--></p>
-                <blockquote>War okee</blockquote>
-                <p class="comment-author">–Linus <!-- <img src="" alt="Linus" class="comment-author-pic">--></p>
-                <hr>
-            </div>
-        </div>
-                <div class="footer">
-            <p>Website-Bau von: 04.08.2024 19:37</p>
-            <p>&copy;2024 Malte Dostal, technischer Inhalt (im ausdrücklichen Gegensatz zum tatsächlichen Inhalt der Website) nach Belieben, auch ohne Quellennennung, verwendbar.</p>
-            <p>Diese Website wird statisch generiert aus JSON-Dateien von einem kleinen Rust-Programm (<a href="https://www.example.com">https://www.example.com</a>)</p>
-        </div>
-
+        <script>
+        window.addEventListener('load', () => {
+            const hash = window.location.hash;
+            if (hash) {
+                const targetElement = document.querySelector(hash);
+                if (targetElement) {
+                    window.scrollTo(0, 0);
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+        </script>
     </body>
 </html>
 

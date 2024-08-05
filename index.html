@@ -21,6 +21,29 @@
                 <a href="javascript:void(0);" class="hamburger" onclick="hamburgerToggle()">&#x2630;</a>
             </div>
         </div>
+
+
+        <div class="main">
+            <h1>Willkommen beim Buchklub Lipsius!</h1>
+            <div class="main-content">
+                <p>Unser kleiner Buchklub besteht derzeit aus <a href="members.html">4 Mitgliedern</a> und ist <a href="contact.html"><i>auf der Suche nach Neuzugängen!</i></a></p>
+                <div id="currently-reading">
+                <p><i>Wir lesen gerade</i>: Lushins Verteidigung</p>
+                <p class="comment-author">vorgeschlagen von: Jessi</p>
+                </div>
+                    <h2>Letzte Lektüre: Quecksilber (Amélie Nothomb)</h2>
+                <p class="comment-author">Vorgeschlagen von: Linus</p>
+                    <p>... bei dem wir uns herrlich uneinig waren.</p>
+                
+                
+                <p><a href="books.html#not-first-book">Alle Lektüren ...</a></p>
+            </div>
+        </div>
+                <div class="footer">
+            <p>Website-Bau vom: 05.08.2024 18:14</p>
+            <p>&copy; technische Umsetzung: 2024 Malte Dostal. Frei und ohne Quellennennung nach Belieben wiederverwertbar.</p>
+            <p>&copy; Inhalt: 2024 die <a href="members.html">Mitglieder</a>.</p>
+        </div>
         <script>
         function hamburgerToggle() {
             var nav = document.getElementById("navlinks");
@@ -30,24 +53,24 @@
                 nav.style.display = "block";
             }
         }
+        var colls = document.getElementsByClassName("collapser");
+        for (var i = 0; i < colls.length; i++) {
+            var coll = colls[i];
+            coll.innerHTML = "&blacktriangleright; " + coll.innerHTML;
+            coll.nextElementSibling.style.display = "none";
+            coll.addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    this.innerHTML = "&blacktriangleright;" + this.innerHTML.substring(1);
+                    content.style.display = "none";
+                } else {
+                    this.innerHTML = "&blacktriangledown;" + this.innerHTML.substring(1);
+                    content.style.display = "block";
+                }
+            });
+        }
         </script>
-
-
-        <div class="main">
-            <h1>Willkommen beim Buchklub Lipsius!</h1>
-            <div class="main-content">
-                <p>Wir lesen gerade: Lushins Verteidigung</p>
-                <p>Neuester Beitrag:</p>
-                <article>
-                    Lorem Ipsum bla bla bla
-                </article>
-            </div>
-        </div>
-                <div class="footer">
-            <p>Website-Bau von: 04.08.2024 19:37</p>
-            <p>&copy;2024 Malte Dostal, technischer Inhalt (im ausdrücklichen Gegensatz zum tatsächlichen Inhalt der Website) nach Belieben, auch ohne Quellennennung, verwendbar.</p>
-            <p>Diese Website wird statisch generiert aus JSON-Dateien von einem kleinen Rust-Programm (<a href="https://www.example.com">https://www.example.com</a>)</p>
-        </div>
 
     </body>
 </html>

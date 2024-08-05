@@ -21,6 +21,68 @@
                 <a href="javascript:void(0);" class="hamburger" onclick="hamburgerToggle()">&#x2630;</a>
             </div>
         </div>
+
+
+        <div class="main">
+            <h1>Mitglieder</h1>
+            <div class="member">
+                <h2>Alexander</h2>
+                <!-- <img src="img/alex.webp", alt="&#11217;Alexander"> -->
+                <span class="member-short-info">studiert die Rechtswissenschaft</span>
+                <div class="left-align">
+                    <p class="member-long-info">Lorem Pissum und so weiter und so fort, das hies soll ein bisschen Platz brauchen und potentiell über mehrere Zeilen gehen, bla bla bla und so weiter und so fort</p>
+                    <h3 class="collapser">Vorgeschlagene Bücher</h3>
+                    <ul>
+                        <li>Kazuo Ishiguro: Der Maler der fließenden Welt</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="member">
+                <h2>Jessica</h2>
+                <!-- <img src="img/jessi.webp", alt="&#11217;Jessica"> -->
+                <span class="member-short-info">studiert die Rechtswissenschaft</span>
+                <div class="left-align">
+                    <p class="member-long-info">Lorem Pissum und so weiter und so fort, das hies soll ein bisschen Platz brauchen und potentiell über mehrere Zeilen gehen, bla bla bla und so weiter und so fort</p>
+                    <h3 class="collapser">Vorgeschlagene Bücher</h3>
+                    <ul>
+                        <li>Vladimir Nabokov: Lushins Verteidigung</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="member">
+                <h2>Linus</h2>
+                <!-- <img src="img/linus.webp", alt="&#11217;Linus"> -->
+                <span class="member-short-info">studiert die Rechtswissenschaft</span>
+                <div class="left-align">
+                    <p class="member-long-info">Lorem Pissum und so weiter und so fort, das hies soll ein bisschen Platz brauchen und potentiell über mehrere Zeilen gehen, bla bla bla und so weiter und so fort</p>
+                    <h3 class="collapser">Vorgeschlagene Bücher</h3>
+                    <ul>
+                        <li>Amélie Nothomb: Quecksilber</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="member">
+                <h2>Malte</h2>
+                <!-- <img src="img/malte.webp", alt="&#11217;Malte"> -->
+                <span class="member-short-info">studiert die Rechnerwissenschaft, Webmaster</span>
+                <div class="left-align">
+                    <p class="member-long-info">Lorem Pissum und so weiter und so fort, das hies soll ein bisschen Platz brauchen und potentiell über mehrere Zeilen gehen, bla bla bla und so weiter und so fort</p>
+                    <h3 class="collapser">Vorgeschlagene Bücher</h3>
+                    <ul>
+                        <li>Benjamin Labatut: Das blinde Licht. Irrfahrten der Wissenschaft</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+                <div class="footer">
+            <p>Website-Bau vom: 05.08.2024 18:14</p>
+            <p>&copy; technische Umsetzung: 2024 Malte Dostal. Frei und ohne Quellennennung nach Belieben wiederverwertbar.</p>
+            <p>&copy; Inhalt: 2024 die <a href="members.html">Mitglieder</a>.</p>
+        </div>
         <script>
         function hamburgerToggle() {
             var nav = document.getElementById("navlinks");
@@ -30,31 +92,24 @@
                 nav.style.display = "block";
             }
         }
+        var colls = document.getElementsByClassName("collapser");
+        for (var i = 0; i < colls.length; i++) {
+            var coll = colls[i];
+            coll.innerHTML = "&blacktriangleright; " + coll.innerHTML;
+            coll.nextElementSibling.style.display = "none";
+            coll.addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    this.innerHTML = "&blacktriangleright;" + this.innerHTML.substring(1);
+                    content.style.display = "none";
+                } else {
+                    this.innerHTML = "&blacktriangledown;" + this.innerHTML.substring(1);
+                    content.style.display = "block";
+                }
+            });
+        }
         </script>
-
-
-        <div class="main">
-            <h1>Mitglieder</h1>
-            <div class="member">
-                <h2>Alexander</h2>
-                <!-- <img src="img/alex.webp", alt="&#11217;Alexander"> -->
-                <span class="member-short-info">studiert die Rechtswissenschaft</span>
-                <p class="member-long-info">Lorem Pissum und so weiter und so fort, das hies soll ein bisschen Platz brauchen und potentiell über mehrere Zeilen gehen, bla bla bla und so weiter und so fort</p>
-            </div>
-            <hr>
-            <div class="member">
-                <h2>Malte</h2>
-                <!-- <img src="img/malte.webp", alt="&#11217;Malte"> -->
-                <span class="member-short-info">studiert die Rechnerwissenschaft</span>
-                <p class="member-long-info">Lorem Pissum und so weiter und so fort, das hies soll ein bisschen Platz brauchen und potentiell über mehrere Zeilen gehen, bla bla bla und so weiter und so fort</p>
-            </div>
-            <hr>
-        </div>
-                <div class="footer">
-            <p>Website-Bau von: 04.08.2024 19:37</p>
-            <p>&copy;2024 Malte Dostal, technischer Inhalt (im ausdrücklichen Gegensatz zum tatsächlichen Inhalt der Website) nach Belieben, auch ohne Quellennennung, verwendbar.</p>
-            <p>Diese Website wird statisch generiert aus JSON-Dateien von einem kleinen Rust-Programm (<a href="https://www.example.com">https://www.example.com</a>)</p>
-        </div>
 
     </body>
 </html>
