@@ -3,14 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Buchklub Lipsius: Kontakt</title>
+        <title>Buchklub Lipsia: Kontakt</title>
         <link rel="stylesheet" href="global.css">
     </head>
 
     <body>
                 <div class="non-footer">
             <div class="navbar">
-                <a href="index.html" class="navlogo">Buchklub Lipsius</a>
+                <a href="index.html" class="navlogo">Buchklub Lipsia</a>
                 <div class="navlinks" id="navlinks">
                     <a href="books.html" class="navitem">Bücher</a>
                     <a href="members.html" class="navitem">Mitglieder</a>
@@ -28,37 +28,11 @@
             <p>Für Annahmeanträge und alles Weitere:<br>malte (punkt) dostal (at) gmail (punkt) com</p>
         </div>
                 <div class="footer">
-            <p>Website-Bau vom: 05.08.2024 18:14</p>
+            <p>Website-Bau vom: 06.08.2024 14:26</p>
             <p>&copy; technische Umsetzung: 2024 Malte Dostal. Frei und ohne Quellennennung nach Belieben wiederverwertbar.</p>
             <p>&copy; Inhalt: 2024 die <a href="members.html">Mitglieder</a>.</p>
         </div>
-        <script>
-        function hamburgerToggle() {
-            var nav = document.getElementById("navlinks");
-            if (nav.style.display === "block") {
-                nav.style.display = "none";
-            } else {
-                nav.style.display = "block";
-            }
-        }
-        var colls = document.getElementsByClassName("collapser");
-        for (var i = 0; i < colls.length; i++) {
-            var coll = colls[i];
-            coll.innerHTML = "&blacktriangleright; " + coll.innerHTML;
-            coll.nextElementSibling.style.display = "none";
-            coll.addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                    this.innerHTML = "&blacktriangleright;" + this.innerHTML.substring(1);
-                    content.style.display = "none";
-                } else {
-                    this.innerHTML = "&blacktriangledown;" + this.innerHTML.substring(1);
-                    content.style.display = "block";
-                }
-            });
-        }
-        </script>
+        <script src="global.js"></script>
 
     </body>
 </html>

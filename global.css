@@ -62,8 +62,8 @@
     color: gray;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: .7em;
-    margin-top: -1.25em;
+    font-size: .85em;
+    margin-top: -1em;
 }
 
 .comment-author-pic {
@@ -118,6 +118,11 @@ blockquote {
 }
 
 .collapser {
+    cursor: pointer;
+}
+
+.more, .less {
+    font-style: italic;
     cursor: pointer;
 }
 

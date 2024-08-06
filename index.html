@@ -3,14 +3,17 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Buchklub Lipsius</title>
+        <meta name="keywords" content="Leipzig, Buchklub, Literatur, Literaturklub, Uni Leipzig, Universität Leipzig, lesen, Bücher">
+        <meta name="description" content="Ein kleiner Buchklub in Leipzig, der Anfang 2024 gegründet wurde und Mitglieder sucht!">
+        <meta name="author" content="Malte Dostal">
+        <title>Buchklub Lipsia</title>
         <link rel="stylesheet" href="global.css">
     </head>
 
     <body>
                 <div class="non-footer">
             <div class="navbar">
-                <a href="index.html" class="navlogo">Buchklub Lipsius</a>
+                <a href="index.html" class="navlogo">Buchklub Lipsia</a>
                 <div class="navlinks" id="navlinks">
                     <a href="books.html" class="navitem">Bücher</a>
                     <a href="members.html" class="navitem">Mitglieder</a>
@@ -24,53 +27,36 @@
 
 
         <div class="main">
-            <h1>Willkommen beim Buchklub Lipsius!</h1>
+            <h1>Willkommen beim Buchklub Lipsia!</h1>
             <div class="main-content">
                 <p>Unser kleiner Buchklub besteht derzeit aus <a href="members.html">4 Mitgliedern</a> und ist <a href="contact.html"><i>auf der Suche nach Neuzugängen!</i></a></p>
                 <div id="currently-reading">
-                <p><i>Wir lesen gerade</i>: Lushins Verteidigung</p>
-                <p class="comment-author">vorgeschlagen von: Jessi</p>
+                <p><i>Wir lesen gerade</i>: 
+                Lushins Verteidigung (Vladimir Nabokov,&nbsp;1930)
+                </p>
+                <p class="comment-author">vorgeschlagen von: jessi</p>
                 </div>
-                    <h2>Letzte Lektüre: Quecksilber (Amélie Nothomb)</h2>
-                <p class="comment-author">Vorgeschlagen von: Linus</p>
+                    <h2>Letzte Lektüre: Quecksilber (Amélie Nothomb,&nbsp;1998)</h2>
+                <p class="comment-author">Vorgeschlagen von: Linus<br>aus dem Französischen von Wolfgang Krege</p>
                     <p>... bei dem wir uns herrlich uneinig waren.</p>
-                
+                <h3>Meinungen der Mitglieder</h3>
+                    <blockquote>Das erste Buchklubbuch, das den Bechdel-Test besteht. Der Roman erzählt über 180 Seiten eine spannende, wenn auch an einigen Stellen etwas unglaubwürdige, Geschichte. Da das Buch hauptsächlich in wörtlicher Rede geschrieben ist, wirkt es fast wie ein Drama oder ein Drehbuch. Durch die Kürze bleibt die Spannung übers Buch hinweg aufrechterhalten, jedoch missen die Charaktere eine gewisse Tiefe.</blockquote>
+                    <p class="comment-author">–Linus <!-- <img src="img/linus.webp" alt="Linus" class="comment-author-pic">--></p>
                 
                 <p><a href="books.html#not-first-book">Alle Lektüren ...</a></p>
+                <h2>Häufig gestellte Fragen</h2>
+                <blockquote>Wie ist der Ablauf des Buchklubs?</blockquote>
+                <p>Nachdem das Mitglied, das an der Reihe ist, sein Buch erfolgreich vorgeschlagen hat, nehmen wir uns drei bis vier Wochen Zeit, um es zu lesen. Danach treffen wir uns an einem vom selben Mitglied vorgeschlagenen Ort (bspw. einem Café) und besprechen das Buch. Im Anschluss daran macht das nächste Mitglied seinen Vorschlag.</p>
+                <blockquote>Wieso lest ihr keine waschechten Klassiker wie (den zu Leipzig passenden!) Goethe o. ä.?</blockquote>
+                <p>Echte Klassiker vermeiden wir absichtlich, da wir sie sozusagen als »bereits gelöste Rätsel« ansehen. Über alle interessante Ideen, die man zu ihnen haben könnte, hat ein Literaturwissenschaftler bereits einen Aufsatz geschrieben. Ausdrücklich ausgeschlossen haben wir »echte Klassiker« indes freilich nicht.</p>
             </div>
         </div>
                 <div class="footer">
-            <p>Website-Bau vom: 05.08.2024 18:14</p>
+            <p>Website-Bau vom: 06.08.2024 14:26</p>
             <p>&copy; technische Umsetzung: 2024 Malte Dostal. Frei und ohne Quellennennung nach Belieben wiederverwertbar.</p>
             <p>&copy; Inhalt: 2024 die <a href="members.html">Mitglieder</a>.</p>
         </div>
-        <script>
-        function hamburgerToggle() {
-            var nav = document.getElementById("navlinks");
-            if (nav.style.display === "block") {
-                nav.style.display = "none";
-            } else {
-                nav.style.display = "block";
-            }
-        }
-        var colls = document.getElementsByClassName("collapser");
-        for (var i = 0; i < colls.length; i++) {
-            var coll = colls[i];
-            coll.innerHTML = "&blacktriangleright; " + coll.innerHTML;
-            coll.nextElementSibling.style.display = "none";
-            coll.addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                    this.innerHTML = "&blacktriangleright;" + this.innerHTML.substring(1);
-                    content.style.display = "none";
-                } else {
-                    this.innerHTML = "&blacktriangledown;" + this.innerHTML.substring(1);
-                    content.style.display = "block";
-                }
-            });
-        }
-        </script>
+        <script src="global.js"></script>
 
     </body>
 </html>
