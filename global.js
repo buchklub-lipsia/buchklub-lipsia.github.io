@@ -19,8 +19,12 @@ function getSiblingByClass(e, className) {
 const colls = document.getElementsByClassName("collapser");
 for (let i = 0; i < colls.length; i++) {
     const coll = colls[i];
-    coll.innerHTML = "&blacktriangleright; " + coll.innerHTML;
-    coll.nextElementSibling.style.display = "none";
+    if (coll.classList.contains("init-show")) {
+        coll.innerHTML = "&blacktriangledown; " + coll.innerHTML;
+    } else {
+        coll.innerHTML = "&blacktriangleright; " + coll.innerHTML;
+        coll.nextElementSibling.style.display = "none";
+    }
     coll.addEventListener("click", function() {
         this.classList.toggle("active");
         const content = this.nextElementSibling;
@@ -34,11 +38,11 @@ for (let i = 0; i < colls.length; i++) {
     });
 }
 const readMoreThreshold = 100;
-const quotes = document.getElementsByTagName("blockquote");
+const folds = document.getElementsByClassName("fold");
 const MORE = "... Mehr anzeigen";
 const LESS = " (Weniger anzeigen)";
-for (let i = 0; i < quotes.length; i++) {
-    const e = quotes[i];
+for (let i = 0; i < folds.length; i++) {
+    const e = folds[i];
     if (e.innerHTML.length >= readMoreThreshold) {
         e.innerHTML = e.innerHTML.substring(0, readMoreThreshold)
             + '<span class="more">' + MORE + '</span><span class="more-content" style="display:none;">'
