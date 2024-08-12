@@ -39,8 +39,8 @@ for (let i = 0; i < colls.length; i++) {
 }
 const readMoreThreshold = 100;
 const folds = document.getElementsByClassName("fold");
-const MORE = "... Mehr anzeigen";
-const LESS = " (Weniger anzeigen)";
+const MORE = "...&nbsp;Mehr&nbsp;anzeigen";
+const LESS = "&nbsp;(Weniger&nbsp;anzeigen)";
 for (let i = 0; i < folds.length; i++) {
     const e = folds[i];
     if (e.innerHTML.length >= readMoreThreshold) {

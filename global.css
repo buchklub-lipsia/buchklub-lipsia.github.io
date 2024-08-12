@@ -7,6 +7,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    font-family: serif;
 }
 
 .navbar {
@@ -28,6 +29,10 @@ html, body {
     left: 1em;
     text-decoration: none;
     color: black;
+}
+
+.navlogo img {
+    max-width: 5em;
 }
 
 .navitem {
@@ -137,6 +142,8 @@ blockquote {
 .more, .less {
     font-style: italic;
     cursor: pointer;
+    color: gray;
+    font-variant: small-caps;
 }
 
 .footer {
