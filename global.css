@@ -146,6 +146,33 @@ blockquote {
     font-variant: small-caps;
 }
 
+.p-arab-p {
+    counter-reset: arab;
+}
+
+.alpha-p {
+    counter-reset: alpha;
+}
+
+li {
+    list-style: none;
+    text-indent: -1em;
+}
+
+.p-arab-p > li:before {
+    display: inline-block;
+    counter-increment: arab;
+    content: "(" counter(arab) ")";
+    margin-right: 0.75em;
+}
+
+.alpha-p > li:before {
+    display: inline-block;
+    counter-increment: alpha;
+    content: counter(alpha, lower-alpha) ")";
+    margin-right: 1em;
+}
+
 .footer {
     max-width: var(--content-width);
     margin: 0 auto;
