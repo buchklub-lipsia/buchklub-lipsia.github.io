@@ -75,12 +75,20 @@ h1 {
     border-radius: .35em;
 }
 
-.comment-author {
+.blue-text {
     color: var(--theme);
     font-style: italic;
     font-weight: bold;
     font-size: .85em;
     margin-top: -1em;
+}
+
+.comment-author-text {
+    font-size: 1em;
+}
+
+.comment-author {
+    margin-top: 0em;
 }
 
 .comment-author-pic {
