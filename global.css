@@ -1,6 +1,6 @@
 :root {
     --content-width: 50em;
-    --beige: #D1BC8A;
+    --beige: #e8e6e3;
     --theme: #6a93b0;
 }
 
@@ -99,16 +99,40 @@ h1 {
     border-radius: 50%;
 }
 
-.compact-list {
-    text-align: left;
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+}
+
+thead {
+    color: var(--theme);
+    background-color: var(--beige);
 }
 
 blockquote {
     font-style: italic;
-    background-color: #e8e6e3;
+    background-color: var(--beige);
     padding: 1em;
     border-radius: .75em;
     line-height: 1.5;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td {
+    text-align: left;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
 }
 
 .member img {
