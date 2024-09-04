@@ -16,27 +16,6 @@ function getSiblingByClass(e, className) {
     }
 }
 
-const colls = document.getElementsByClassName("collapser");
-for (let i = 0; i < colls.length; i++) {
-    const coll = colls[i];
-    if (coll.classList.contains("init-show")) {
-        coll.innerHTML = "&blacktriangledown; " + coll.innerHTML;
-    } else {
-        coll.innerHTML = "&blacktriangleright; " + coll.innerHTML;
-        coll.nextElementSibling.style.display = "none";
-    }
-    coll.addEventListener("click", function() {
-        this.classList.toggle("active");
-        const content = this.nextElementSibling;
-        if (content.style.display === "block") {
-            this.innerHTML = "&blacktriangleright;" + this.innerHTML.substring(1);
-            content.style.display = "none";
-        } else {
-            this.innerHTML = "&blacktriangledown;" + this.innerHTML.substring(1);
-            content.style.display = "block";
-        }
-    });
-}
 const readMoreThreshold = 100;
 const folds = document.getElementsByClassName("fold");
 const MORE = "...&nbsp;Mehr&nbsp;anzeigen";

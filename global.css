@@ -101,7 +101,6 @@ h1 {
 
 table {
     border-collapse: collapse;
-    border: 2px solid rgb(140 140 140);
 }
 
 thead {
@@ -115,6 +114,12 @@ blockquote {
     padding: 1em;
     border-radius: .75em;
     line-height: 1.5;
+    margin-left: 0;
+}
+
+blockquote p {
+    margin-top: 0.5em;
+    margin-bottom: 0em;
 }
 
 th,
