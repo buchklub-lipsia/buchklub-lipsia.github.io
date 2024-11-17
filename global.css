@@ -2,6 +2,7 @@
     --content-width: 50em;
     --beige: #e8e6e3;
     --theme: #6a93b0;
+    --secondary: #ffebcc;
 }
 
 html, body {
@@ -160,6 +161,14 @@ tbody > tr:nth-of-type(even) {
   background-color: rgb(237 238 242);
 }
 
+.member {
+    background-color: var(--secondary);
+    border-radius: 1em;
+    padding: 0.5em;
+    padding-top: 0.2em;
+    margin-bottom: 1em;
+}
+
 .member img {
     display: block;
     top: 0;
@@ -290,5 +299,17 @@ ul li {
 
     #index-logo {
         width: 40%;
+    }
+
+    #members-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 1em;
+    }
+
+    #books-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 1em;
     }
 }
