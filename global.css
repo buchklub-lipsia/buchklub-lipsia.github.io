@@ -325,4 +325,11 @@ ul li {
         grid-template-columns: 50% 50%;
         gap: 1em;
     }
+
+    #dos-donts-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-top: 1em;
+        gap: 1em;
+    }
 }
