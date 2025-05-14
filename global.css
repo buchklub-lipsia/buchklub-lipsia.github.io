@@ -26,7 +26,8 @@ h1 {
 }
 
 .navbar-hr {
-    width: 50%;
+    width: var(--content-width);
+    max-width: 100%;
     color: var(--theme);
 }
 
@@ -365,6 +366,10 @@ ul li {
     #currently-reading-div {
         margin-left: 5em;
         margin-right: 5em;
+    }
+
+    .member {
+        margin-bottom: 0em;
     }
 
     #members-container {
