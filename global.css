@@ -26,7 +26,8 @@ h1 {
 }
 
 .navbar-hr {
-    width: 50%;
+    width: var(--content-width);
+    max-width: 100%;
     color: var(--theme);
 }
 
