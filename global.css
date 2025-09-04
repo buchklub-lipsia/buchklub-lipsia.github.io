@@ -10,7 +10,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: italic;
+    font-family: serif;
 }
 
 h1 {
@@ -49,6 +49,10 @@ h1 {
     text-decoration: none;
     color: black;
     margin-top: .3em;
+}
+
+.navitem:hover {
+    text-decoration: underline;
 }
 
 .hamburger {
